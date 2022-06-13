@@ -5,27 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E6E3E3"
+    android:orientation="vertical"
     tools:context=".mostrar_libros">
 
-    <ImageView
-        android:id="@+id/view_volver_mostrar"
-        android:layout_width="50dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/devolver"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back"
-        tools:ignore="VectorDrawableCompat" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/view_volver_mostrar"
+            android:layout_width="50dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/devolver"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="VectorDrawableCompat" />
+
+        <SearchView
+            android:id="@+id/SeatchView"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content">
+
+        </SearchView>
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/list_libros_mostrar"
         android:layout_width="match_parent"
-        android:layout_height="710dp"
-        android:layout_marginTop="50dp"
-        android:cacheColorHint="#36B198"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="93dp" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>
