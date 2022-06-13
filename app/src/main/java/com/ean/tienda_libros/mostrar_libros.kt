@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import Mundo.LaTienda.mostrar_todos_los_nombres_libros
+import android.widget.Toast
 
 class mostrar_libros : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,5 +24,9 @@ class mostrar_libros : AppCompatActivity() {
         val libros= mostrar_todos_los_nombres_libros()
         val adaptlibros= ArrayAdapter(this,android.R.layout.simple_list_item_1,libros)
         lista_de_libros.adapter=adaptlibros
+
+        lista_de_libros.setOnItemClickListener(){parent,view,position,id->
+            Toast.makeText(this,parent.getItemAtPosition(position).toString(),Toast.LENGTH_LONG).show()
+        }
     }
 }
